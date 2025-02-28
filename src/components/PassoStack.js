@@ -15,7 +15,8 @@ export default props => (
             { props.voltar 
                 ?   <Button 
                         title='Voltar'
-                        onPress={()=> props.navigation.navigate(props.voltar) }
+                       // onPress={()=> props.navigation.navigate(props.voltar) }
+                       onPress={() => props.navigation.goBack()}
                     /> 
                 : "."
             }
