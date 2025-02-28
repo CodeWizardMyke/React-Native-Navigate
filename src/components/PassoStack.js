@@ -4,13 +4,20 @@ import { Button } from 'react-native-web';
 
 export default props => (
     <View style={{flex:1}}>
-        <View>
+        <View style={{ flexDirection:'row-reverse', justifyContent:"space-between" }}>
             { props.avancar 
                 ?   <Button 
                         title='Avancar'
                         onPress={()=> props.navigation.navigate(props.avancar) }
                     /> 
-                : false 
+                : "." 
+            }
+            { props.voltar 
+                ?   <Button 
+                        title='Voltar'
+                        onPress={()=> props.navigation.navigate(props.voltar) }
+                    /> 
+                : "."
             }
         </View>
         <View style={{flex:1}}>
