@@ -8,7 +8,13 @@ export default props => (
             { props.avancar 
                 ?   <Button 
                         title='Avancar'
-                        onPress={()=> props.navigation.navigate(props.avancar) }
+                        /*
+                            the code navigates through the pages of the stack and received a string as a parameter in props
+                            onPress={()=> props.navigation.navigate(props.avancar) }
+                        */
+
+                            //add new screen of the same component
+                            onPress={()=> props.navigation.push(props.avancar) }
                     /> 
                 : "." 
             }
