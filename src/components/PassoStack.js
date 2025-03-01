@@ -1,5 +1,5 @@
 import {React} from 'react';
-import {View, Text} from "react-native";
+import {View} from "react-native";
 import { Button } from 'react-native-web';
 
 export default props => (
@@ -14,9 +14,9 @@ export default props => (
                         */
 
                             //add new screen of the same component
-                            onPress={()=> props.navigation.push(props.avancar) }
+                            onPress={()=> props.navigation.navigate(props.avancar) }
                     /> 
-                : "." 
+                : false
             }
             { props.voltar 
                 ?   <Button 
@@ -24,7 +24,7 @@ export default props => (
                        // onPress={()=> props.navigation.navigate(props.voltar) }
                        onPress={() => props.navigation.goBack()}
                     /> 
-                : "."
+                : false
             }
         </View>
         <View style={{flex:1}}>
